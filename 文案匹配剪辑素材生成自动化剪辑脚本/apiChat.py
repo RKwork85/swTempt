@@ -5,6 +5,7 @@ import time
 import random
 import multiprocessing
 from openai import OpenAI
+from openpyxl import Workbook
 from config import pre_config
 
 from sw_package.file_read import data_json, xlsx_to_json, create_output_folder
@@ -57,28 +58,34 @@ def content_solved(content):
     lines = content.strip().split("\n")
     result = [line.split("|", 1)[1].strip() for line in lines]
     video_materials_data = data_json(f"output/{pre_config.shooting_schedule}.json")
-    temp_list= video_materials_data
+    temp_list = video_materials_data
     final_match = []
+
     for i in result:
-        if not temp_list[i]:
-            print(type(temp_list[i]), temp_list[i], i, "为空")
+        if not temp_list.get(i):  # 检查键是否存在
+            print(type(temp_list.get(i)), temp_list.get(i), i, "为空")
             vdieo_materials_match = random_choice(temp_list["产品整体画面/模特展示/动态展示"])
+            cat_data = pre_config.root + "/" + pre_config.shooting_schedule + "/" + "产品整体画面/模特展示/动态展示" + "/" + vdieo_materials_match
         else:
             vdieo_materials_match = random_choice(temp_list[i])
             cat_data = pre_config.root + "/" + pre_config.shooting_schedule + "/" + i + "/" + vdieo_materials_match
 
         # 生成初始路径
-        
-        # 检查路径是否已经存在于 final_match 中
-        while cat_data in final_match:
+        max_attempts = len(temp_list[i]) if temp_list.get(i) else len(temp_list["产品整体画面/模特展示/动态展示"])
+        attempts = 0
+
+        while cat_data in final_match and attempts < max_attempts:
             # 如果存在，重新选择一个随机项
-            vdieo_materials_match = random_choice(temp_list[i] if temp_list[i] else temp_list["产品整体画面/模特展示/动态展示"])
-            cat_data = pre_config.root + "/" + pre_config.shooting_schedule + "/" + "产品整体画面/模特展示/动态展示" + "/" + vdieo_materials_match
+            vdieo_materials_match = random_choice(temp_list[i] if temp_list.get(i) else temp_list["产品整体画面/模特展示/动态展示"])
+            cat_data = pre_config.root + "/" + pre_config.shooting_schedule + "/" + (i if temp_list.get(i) else "产品整体画面/模特展示/动态展示") + "/" + vdieo_materials_match
+            attempts += 1
 
-            
-            # 添加唯一的路径到 final_match
+        if attempts == max_attempts:
+            print(f"无法为 {i} 找到唯一的路径，已尝试所有可能的选项。")
+            continue  # 跳过当前项
+
+        # 添加唯一的路径到 final_match
         final_match.append(cat_data)
-
 
     final_match_str = "\n".join(final_match)
     # 需要将所有的斜杠改为反斜杠
@@ -146,12 +153,12 @@ if __name__ =='__main__':
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-    touch_folder_files_dictFile("/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/视频素材库/SW/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-浅茶杏/")
+    touch_folder_files_dictFile("/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/视频素材库/SW/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白/")
 
-    input_data = xlsx_to_json('inputData2.xlsx')
+    input_data = xlsx_to_json('inputData2_2.xlsx')
     
     file_list = []
-    samples =input_data[:30]
+    samples =input_data[30:61]
     start = time.time()
 
     result_file = task_running(samples)
@@ -163,4 +170,30 @@ if __name__ =='__main__':
 
 
 
+    wb = Workbook()
+    ws = wb.active
+
+    # 假设 JSON 数据是一个列表
+    if isinstance(result_file, list):
+        # 写入表头（假设每个字典的键是相同的）
+        headers = result_file[0].keys() if result_file else []
+        ws.append(list(headers))
+
+        # 写入数据
+        for item in result_file:
+            ws.append([item.get(header, "") for header in headers])
+    elif isinstance(result_file, dict):
+        # 如果是单个字典，写入键和值
+        headers = result_file.keys()
+        ws.append(list(headers))
+        ws.append([result_file[key] for key in headers])
+    else:
+        raise ValueError("JSON 数据格式不支持")
+    
+    outputFileName = pre_config.shooting_schedule + "-"+ todayTime() + "-" + "30" +".xlsx"
+    # 保存 Excel 文件
+    wb.save(outputFileName)
+    print("文件已保存为 final_result.xlsx")
+
+    
 

@@ -1,0 +1,17 @@
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bb4-VT102-20250219-31.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bb5-VT103-20250219-32.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bb5-VT103-20250219-33.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc1-VT101-20250219-36.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc1-VT102-20250219-37.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc2-VT103-20250219-39.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc3-VT102-20250219-43.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc3-VT102-20250219-44.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc3-VT102-20250219-45.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc4-VT101-20250219-46.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc4-VT102-20250219-49.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc5-VT101-20250219-52.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc5-VT102-20250219-53.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc6-VT102-20250219-56.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc7-VT101-20250219-59.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc7-VT102-20250219-60.mp4
+/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片/Bc7-VT102-20250219-61.mp4
