@@ -20,6 +20,7 @@ def touch_folder_files_dictFile(root_dir):
         
     fileName = root_dir.rstrip("/").split("/")[-1] + ".json"
     filePath = os.path.join(create_output_folder(), fileName)
+    print(filePath)
     with open(filePath, "w", encoding="utf-8") as json_file:
          json.dump(folder_files_dict, json_file, ensure_ascii=False, indent=4)    
 

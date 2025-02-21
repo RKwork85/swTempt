@@ -13,7 +13,7 @@ def trim_videos(input_folder, output_folder):
             
             
             command = [
-                r'ffmpeg', '-ss', '00:00:03', '-i', input_path, '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', 
+                r'ffmpeg', '-ss', '00:00:01', '-i', input_path, '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', 
                 '-map_metadata', '0', '-y', output_path
             ]
             try:
@@ -25,10 +25,10 @@ def trim_videos(input_folder, output_folder):
 
 
 
-input_folder = r"/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/视频素材库/SW/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白/2s"
+input_folder = r"/home/rkwork/小蝶-海沫绿-1s"
 
 
-output_folder = r"/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/视频素材库/SW/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白/冰川白output-2s"
+output_folder = r"/home/rkwork/小蝶-海沫绿-output/"
 
 
 # 执行批量处理

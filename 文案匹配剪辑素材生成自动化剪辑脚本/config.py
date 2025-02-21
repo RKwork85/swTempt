@@ -16,7 +16,7 @@ class ProjectConfig:
         self.dubbing_ai = ["TVB女声"]
         
         # 拍摄行动规划
-        self.shooting_schedule = "SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白"
+        self.shooting_schedule = "SW-AccountA-20250220A-SceneA-ModelA-S4SS1067-冰川灰"
         
         # 视频模版选择
         self.video_template = ["VT101", "VT102", "VT103"]

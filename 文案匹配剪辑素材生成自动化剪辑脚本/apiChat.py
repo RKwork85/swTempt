@@ -31,7 +31,7 @@ def chat_request(question_json):
     tempt_data = pre_config.data
     tempt_data["视频编号"] = todayTime() +"-" + question_json["ID"]
     tempt_data["回溯信息"] = pre_config.shooting_schedule + "-" + question_json["模板编号"] + "-" + random_choice(pre_config.video_template) + "-"+ todayTime() +"-" + question_json["ID"]
-    tempt_data["视频名称"] = question_json["模板编号"] + "-" + random_choice(pre_config.video_template) + "-"+ todayTime() +"-" + question_json["ID"]
+    tempt_data["视频名称"] = pre_config.shooting_schedule[-3:] + question_json["模板编号"] + "-" + random_choice(pre_config.video_template) + "-"+ todayTime() +"-" + question_json["ID"]
     tempt_data["视频字幕"] = substringsStr
     tempt_data["切割数组"] = commasCountStr
     concat = content_solved(content)
@@ -153,12 +153,12 @@ if __name__ =='__main__':
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-    touch_folder_files_dictFile("/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/视频素材库/SW/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白/")
+    touch_folder_files_dictFile("/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/视频素材库/SW/SW-AccountA-20250220A-SceneA-ModelA-S4SS1067-冰川灰/")
 
-    input_data = xlsx_to_json('inputData2_2.xlsx')
+    input_data = xlsx_to_json('inputData2.xlsx')
     
     file_list = []
-    samples =input_data[30:61]
+    samples =input_data[61:91]
     start = time.time()
 
     result_file = task_running(samples)

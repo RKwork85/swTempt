@@ -2,10 +2,9 @@ import os
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # 指定要列出的目录路径
-directory_path = "/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250218A-SceneA-ModelA-S4SS1067-冰川白-20250219-30-成片"
+directory_path = "/run/user/1000/gvfs/smb-share:server=xiawei.local,share=1号储存盘/SW速惟项目/sw文案架构成片/SW-AccountA-20250220A-SceneA-ModelA-S4SS1067-青柠绿-20250220-30-成片"
 
-# 指定输出文件的路径和文件名
-output_file_path = "file_paths.txt"
+output_file_path = os.path.basename(directory_path)
 
 # 打开输出文件，准备写入内容
 with open(output_file_path, "w") as output_file:
