@@ -158,7 +158,7 @@ if __name__ =='__main__':
     input_data = xlsx_to_json('inputData2.xlsx')
     
     file_list = []
-    samples =input_data[61:91]
+    samples =input_data[91:121]
     start = time.time()
 
     result_file = task_running(samples)
